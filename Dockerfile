@@ -35,5 +35,5 @@ COPY --from=base /app/static ./static
 EXPOSE 8080
 
 # Command to run the application
-CMD ["./main"]
+CMD ["./main"] 
 
