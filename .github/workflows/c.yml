@@ -14,12 +14,20 @@ jobs:
 
     steps:
     - name: git
-      uses: actions/checkoutv4
+      uses: actions/checkoutv@4
     - name: setup
       uses: actions/setup-go@v1
     - name: buils
       run:
         go build -o go-web-app
+  push:
+    runs-on: 'ubuntu-latest'
+
+    steps:
+    - name: git
+      uses: actions/checkoutv@4
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
        
 
   
