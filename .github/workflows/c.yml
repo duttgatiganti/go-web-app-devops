@@ -7,4 +7,20 @@ on:
     paths-ignore:
       - 'helm/**'
       - 'k8s/**'
+jobs:
+ 
+  build:
+    run-on: 'ubuntu-latest'
+
+    steps:
+    - name: git
+      uses: actions/checkoutv4
+    - name: setup
+      uses: actions/setup-go@v1
+    - name: buils
+      run:
+        go build -o go-web-app
+       
+
+  
       
