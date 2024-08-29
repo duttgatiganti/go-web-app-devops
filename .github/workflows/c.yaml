@@ -6,7 +6,7 @@ on:
       - main
     paths-ignore:
       - 'helm/*'
-jobs:
+jobs: 
   build:
     runs-on: 'ubuntu:latest'
 
